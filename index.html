@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +32,17 @@
         }
 
         @keyframes bgMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .hero {
@@ -47,6 +56,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -57,8 +67,8 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             margin: 0 auto 30px;
             display: flex;
             align-items: center;
@@ -69,8 +79,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         h1 {
@@ -85,12 +102,16 @@
             font-weight: 400;
             color: var(--light);
             animation: glow 2.5s ease-in-out infinite;
+            margin-bottom: 35px;
         }
 
         @keyframes glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.7;
             }
+
             50% {
                 opacity: 1;
             }
@@ -101,48 +122,78 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
-            background-image: repeating-linear-gradient(
-                90deg,
-                rgba(255,255,255,0.03) 0px,
-                rgba(255,255,255,0.03) 1px,
-                transparent 1px,
-                transparent 80px
-            );
+            background-image: repeating-linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.03) 0px,
+                    rgba(255, 255, 255, 0.03) 1px,
+                    transparent 1px,
+                    transparent 80px);
         }
 
-         a {
-      width: 100%;
-      padding: 0.7rem;
-      margin: 0.5rem 0;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(45deg, #2563eb, #800000);
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      text-shadow: 0 0 5px #ff0000;
-      transition: all 1s ease;
-      margin-top: -20px;
-    }
+        a.login-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
 
-    a:hover {
-      background: linear-gradient(45deg, #ff4b4b, #2563eb);
-      transform: translateY(-2px);
-    }
+            padding: 0.7rem 1.3rem;
+            margin: 0.5rem 0;
+            margin-top: -20px;
 
-        
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            background: transparent;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.25s ease,
+                transform 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            filter: brightness(1.1);
+        }
+
+        a.login-btn:hover {
+            background-color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        a.login-btn:active {
+            transform: translateY(0);
+        }
+
+       
+
+        a.login-btn:hover .btn-icon {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
+
 <body>
 
-<div class="lines"></div>
+    <div class="lines"></div>
 
-<div class="hero">
-    <img class="logo" src="import.png" alt="Logo">
-    <h1>LK Import Trading</h1>
-    <h2>Import Foreign Products Today</h2>
-    <a href="https://bucksmon.github.io/GtaW-project/Login.html">Login with GTA:W</a>
-</div>
+    <div class="hero">
+        <img class="logo" src="import.png" alt="Logo">
+        <h1>LK Import Trading</h1>
+        <h2>Import Foreign Products Today</h2>
+        <a href="https://bucksmon.github.io/GtaW-project/Login.html" class="login-btn">
+            <img src="import.png" alt="GTAW Logo" class="btn-icon">
+            <span>Login with GTA:W</span>
+        </a>
+
+    </div>
 
 </body>
+
 </html>
